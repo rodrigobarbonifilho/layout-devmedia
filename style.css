@@ -17,8 +17,26 @@
 body {
 	font-family: "Raleway", sans-serif;
 	font-size: 2rem;
+	padding-bottom: 20rem;
+	background-color: #f1f1f1;
 }
 
+section {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 77vw;
+	margin: 30px auto 0 auto;
+}
+
+section :where(h2, h3, h4) {
+	font-weight: normal;
+	font-size: 2.4rem;
+}
+
+section p {
+	font-size: 1.6rem;
+}
 /* ================================== */
 /*                Header              */
 /* ================================== */
@@ -57,7 +75,9 @@ header > i {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 92vh;
+	width: 100%;
+	height: 90vh;
+	margin: 0;
 	background-image: url("imagens/london.jpg");
 	background-size: contain;
 }
@@ -126,29 +146,29 @@ header > i {
 	font-size: 2.4rem;
 } 
 
-#hero form .input {
+.input {
 	display: flex;
 	flex-direction: column;
 	gap: 5px;
 	width: 100%;
 }
 
-#hero form .input label {
+.input label {
 	font-size: 1.5rem;
 }
 
-#hero form .input input {
+.input input {
 	font-size: 1.5rem;
 	padding: 10px 8px;
 	border: 1px solid #c0c0c0;
 	color: black;
 }
 
-#hero form .input input:focus {
+.input input:focus {
 	outline: 1px solid black;
 }
 
-#hero form .input input::placeholder {
+.input input::placeholder {
 	color: #9b9b9b;
 }
 
@@ -157,5 +177,109 @@ header > i {
 	font-size: 1.5rem;
 	padding: 11px 18px;
 	background-color: #616161;
+	color: white;
+}
+
+/* ================================== */
+/*             1º Section             */
+/* ================================== */
+.images {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 15px;
+}
+
+.image-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.image-container img {
+	width: 100%;
+}
+
+.image-container p {
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
+	color: white;
+}
+
+.column:nth-child(2) .img-wrapper {
+	display: grid;
+	grid-column-start: 2;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 15px;
+}
+
+/* ================================== */
+/*              Add Infos             */
+/* ================================== */
+#add-infos p {
+	font-size: 1.5rem;
+}
+
+.color-faded {
+	opacity: 0.5;
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	width: 100%;
+	gap: 15px;
+}
+
+.card {
+	background-color: white;
+}
+
+.card img {
+	width: 100%;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	justify-content: space-between;
+	padding: 10px 15px;
+}
+
+.content h2 {
+	font-weight: normal;
+	font-size: 2.4rem;
+}
+
+.content button {
+	font-weight: normal;
+	font-size: 1.6rem;
+	text-align: left;
+	background-color: white;
+	padding: 10px 15px 15px 15px;
+}
+
+/* ================================== */
+/*             Newsletter             */
+/* ================================== */
+#newsletter {
+	padding: 30px 15px 15px 15px;
+	background-color: #606060;
+	box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.153);
+	color: white;
+}
+
+#newsletter h2 {
+	font-size: 3rem;
+}
+
+#newsletter button {
+	font-size: 1.5rem;
+	width: 10%;
+	margin-top: 10px;
+	padding: 10px 20px;
+	background-color: #F38981;
 	color: white;
 }
