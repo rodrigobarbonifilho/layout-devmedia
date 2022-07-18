@@ -17,15 +17,22 @@
 body {
 	font-family: "Raleway", sans-serif;
 	font-size: 2rem;
-	padding-bottom: 20rem;
 	background-color: #f1f1f1;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	color: inherit;
 }
 
 section {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
-	width: 77vw;
+	gap: 15px;
+	width: 1050px;
 	margin: 30px auto 0 auto;
 }
 
@@ -37,6 +44,7 @@ section :where(h2, h3, h4) {
 section p {
 	font-size: 1.6rem;
 }
+
 /* ================================== */
 /*                Header              */
 /* ================================== */
@@ -47,6 +55,7 @@ header {
 	max-height: 10vh;
 	padding: 11px 15px;
 	border: 0.5px solid gray;
+	background-color: #FFF;
 }
 
 header > i {
@@ -132,6 +141,7 @@ header > i {
 	width: 100%;
 	height: 100%;
 	padding: 15px;
+	gap: 15px;
 }
 
 #hero form .row {
@@ -197,6 +207,7 @@ header > i {
 
 .image-container img {
 	width: 100%;
+	height: 100%;
 }
 
 .image-container p {
@@ -265,21 +276,198 @@ header > i {
 /*             Newsletter             */
 /* ================================== */
 #newsletter {
-	padding: 30px 15px 15px 15px;
+	padding: 35px 15px 15px 15px;
 	background-color: #606060;
 	box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.153);
+	gap: 25px;
 	color: white;
 }
 
 #newsletter h2 {
 	font-size: 3rem;
+	line-height: 4.2rem;
+}
+
+#newsletter p {
+	font-size: 1.4rem;
+}
+
+#newsletter .input input::placeholder {
+	color: #b8b8b8;
 }
 
 #newsletter button {
-	font-size: 1.5rem;
-	width: 10%;
+	font-size: 1.4rem;
+	font-weight: lighter;
+	width: 100px;
 	margin-top: 10px;
-	padding: 10px 20px;
+	padding: 10px 15px;
 	background-color: #F38981;
 	color: white;
+}
+
+/* ================================== */
+/*              Contact               */
+/* ================================== */
+#contact {
+	gap: 20px;
+}
+
+#contact i {
+	font-size: 1.4rem;
+}
+
+#contact h2 {
+	font-size: 3rem;
+}
+
+#contact p {
+	font-size: 1.4rem;
+}
+
+#contact ul {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+#contact ul li {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	font-size: 1.4rem;
+}
+
+#contact form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	padding: 10px 0;
+}
+
+#contact .input input {
+	padding: 20px 10px;
+}
+
+#contact form button {
+	font-size: 1.5rem;
+	align-self: flex-start;
+	background-color: black;
+	color: white;
+	padding: 15px 24px;
+}
+
+/* ================================== */
+/*               Footer               */
+/* ================================== */
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 40px;
+	padding: 20px 0;
+	color: #606060;
+}
+
+footer i {
+	font-size: 2.4rem;
+}
+
+footer h4 {
+	font-weight: 300;
+	font-size: 1.8rem;
+}
+
+footer ul {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+footer p {
+	font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+	section {
+		width: 95%;
+	}
+	
+	/* ================================== */
+	/*                Header              */
+	/* ================================== */
+	header {
+		justify-content: space-around;
+	}
+		
+	/* ================================== */
+	/*                Main                */
+	/* ================================== */
+	#hero {
+		height: 50vh;
+	}
+		
+	#hero > div {
+		width: 70vw;
+	}
+}
+
+@media (max-width: 450px) {
+	section {
+		width: 95%;
+	}
+	
+	/* ================================== */
+	/*                Header              */
+	/* ================================== */
+	header {
+		justify-content: space-between;
+	}
+		
+	/* ================================== */
+	/*                Main                */
+	/* ================================== */
+	#hero {
+		height: 55vh;
+	}
+
+	#hero > div {
+		width: 100vw;
+		height: 100%;
+	}
+
+	#hero form {
+		gap: 15px;
+	}
+
+	#hero form .row:nth-child(2) {
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.input {
+		gap: 0;
+	}
+	
+	/* ================================== */
+	/*             1º Section             */
+	/* ================================== */
+	.images {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.column:nth-child(2) .img-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	/* ================================== */
+	/*              Add Infos             */
+	/* ================================== */
+	.cards {
+		display: flex;
+		flex-direction: column;
+	}
 }
